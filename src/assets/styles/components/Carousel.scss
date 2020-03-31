@@ -4,9 +4,10 @@
     padding: 30px;
     position: relative;
 }
-::-webkit-scrollbar {
+.carousel::-webkit-scrollbar {
     display: none;
 }
+
 .carousel__container {
     white-space: nowrap;
     margin: 70px 0px;
