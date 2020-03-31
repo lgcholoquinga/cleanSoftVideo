@@ -1,0 +1,17 @@
+.footer {
+    width: 100%;
+    background-image: linear-gradient(to right top, #693818, #7c3719, #90321e, #a62927, #bb1734);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: .9rem;
+    padding-left: 30px;
+}
+.footer a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
