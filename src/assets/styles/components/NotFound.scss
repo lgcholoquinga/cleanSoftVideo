@@ -1,0 +1,43 @@
+.not-found {
+    width: 100%;
+    height: calc(100vh - 150px);
+    background-image: linear-gradient(
+      to right top,
+      #693818,
+      #7c3719,
+      #90321e,
+      #a62927,
+      #bb1734
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .not-found-text {
+    animation-name: pulse;
+    animation-duration: 1s;
+    font-size: 9rem;
+    color: white;
+  }
+  .not-found-text2 {
+    color: white;
+    font-size: 2rem;
+  }
+  .animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

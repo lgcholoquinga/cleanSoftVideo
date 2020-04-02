@@ -1,0 +1,103 @@
+.login {
+    width: 100%;
+    min-height: calc(100vh - 150px);
+    background-image: linear-gradient(to right top, #693818, #7c3719, #90321e, #a62927, #bb1734);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.login__container--title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+.login__container {
+    width: 30%;
+    background-color: rgba(255,255,255,.2);
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    padding: 60px 68px 40px;
+}
+.login__container--form {
+    display: flex;
+    flex-direction: column;
+}
+.login__container--remember {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-top: 20px;
+}
+.login__container--remember label {
+    color: white;
+    font-size: 1.1rem;
+}
+.login__container--remember a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+.login__container--remember a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.login__container--social-media {
+    margin-top: 60px;
+}
+.login__container--social-media > div{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+.login__container--register {
+    font-size: 1.1rem;
+    margin-top: 30px;
+}
+.login__container--register a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+.login__container--register a:hover{
+    text-decoration: underline;
+}
+.login__container--social-media > div > img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.login__form--input {
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid white;
+    height: 50px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none;
+    color: white;
+    font-weight: bold;
+}
+::placeholder {
+    color: white;
+    font-weight: bold;
+}
+.login__form--button {
+    background-color: rgba(255,255,255,.3);
+    border-radius: 25px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}

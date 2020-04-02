@@ -1,5 +1,16 @@
 @media screen and (max-width:1023px) {
-
+    .login {
+        width: auto;
+    }
+    .login__container {
+        width: 70%;
+    }
+    .register {
+        width: auto;
+    }
+    .register__container {
+        width: 70%;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -7,7 +18,12 @@
 }
 
 @media screen and (max-width:480px) {
-    
+    .login {
+        width: auto;
+    }
+    .login__container {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width:320px) {
