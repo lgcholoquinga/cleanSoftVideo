@@ -2,6 +2,11 @@
 export const actions = {
   setFavorite: 'SET_FAVORITE',
   deleteFavorite: 'DELETE_FAVORITE',
+  loginRequest: 'LOGIN_REQUEST',
+  logoutRequest: 'LOGOUT_REQUEST',
+  registerRequest: 'REGISTER_REQUEST',
+  getVideosSource: 'GET_VIDEOS_SOURCE',
+  searchVideo: 'SEACRH_VIDEO',
 };
 
 export const setFavorite = (payload) => ({
@@ -11,5 +16,30 @@ export const setFavorite = (payload) => ({
 
 export const deleteFavorite = (payload) => ({
   type: actions.deleteFavorite,
+  payload,
+});
+
+export const loginRequest = (payload) => ({
+  type: actions.loginRequest,
+  payload,
+});
+
+export const logoutRequest = (payload) => ({
+  type: actions.logoutRequest,
+  payload,
+});
+
+export const registerRequest = (payload) => ({
+  type: actions.registerRequest,
+  payload,
+});
+
+export const getVideosSource = (payload) => ({
+  type: actions.getVideosSource,
+  payload,
+});
+
+export const searchVideo = (payload) => ({
+  type: actions.searchVideo,
   payload,
 });

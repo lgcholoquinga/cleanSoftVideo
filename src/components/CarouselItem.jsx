@@ -1,7 +1,9 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import { setFavorite, deleteFavorite } from '../actions';
 import '../assets/styles/components/CarouselItem.scss';
 import playIcon from '../assets/images/play-icon.png';
@@ -9,7 +11,7 @@ import plusIcon from '../assets/images/plus-icon.png';
 import removeIcon from '../assets/images/remove-icon.png';
 
 const CarouselItem = (props) => {
-  const { id, cover, title, year, contentRating, duration } = props;
+  const { id, cover, title, year, contentRating, duration, isList } = props;
   const handleSetFavorites = () => {
     props.setFavorite({
       id, cover, title, year, contentRating, duration,
@@ -29,13 +31,21 @@ const CarouselItem = (props) => {
       />
       <div className='carousel-item__details'>
         <div>
-          <img
-            src={playIcon}
-            alt='play'
-          />
+          <Link to={`/player/${id}`}>
+            <img
+              src={playIcon}
+              alt='play'
+            />
+          </Link>
           {
-            // eslint-disable-next-line react/destructuring-assignment
-            !props.mylist && (
+            isList ? (
+              <img
+                src={removeIcon}
+                alt='remove'
+                onClick={() => handelDeletefavorite(id)}
+              />
+            ) : (
+
               <img
                 src={plusIcon}
                 alt='plus'
@@ -43,20 +53,10 @@ const CarouselItem = (props) => {
               />
             )
           }
-          {
-            // eslint-disable-next-line react/destructuring-assignment
-            props.mylist && (
-              <img
-                src={removeIcon}
-                alt='remove'
-                onClick={() => handelDeletefavorite(id)}
-              />
-            )
-          }
         </div>
         <p className='carousel-item__details--title'>{title}</p>
         <p className='carousel-item__details--subtitle'>
-          {`${year} ${contentRating} ${duration}`}
+          {`${year} ${contentRating} ${duration} minutes`}
         </p>
       </div>
     </div>
